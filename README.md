@@ -13,6 +13,14 @@ An agentic AI workflow where an LLM (Groq / Qwen) autonomously decides which too
 
 ## Project structure
 
+```
+src/
+  football_tools.py   # tool schemas + implementations
+  agent.py            # agent loop (tool calling, max-iteration guard, memory)
+  app.py              # Streamlit chat UI with per-tool usage log
+  api.py              # FastAPI REST service
+```
+
 ## Setup
 
 ```bash
@@ -20,6 +28,10 @@ pip install -r requirements.txt
 ```
 
 Create a `.env` file in the project root:
+
+```
+GROQ_API_KEY=your_groq_key
+```
 
 TheSportsDB works without a key (public test key `123`).
 
